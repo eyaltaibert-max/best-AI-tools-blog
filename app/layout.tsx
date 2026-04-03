@@ -99,10 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <head>
         <meta name="msapplication-TileColor" content="#000000" />
-        <meta
-          name="impact-site-verification"
-          content="99d5db8a-7c14-4249-abc7-bb280dd949c8"
-        />
+        <meta name="impact-site-verification" content="99d5db8a-7c14-4249-abc7-bb280dd949c8" />
         <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
       </head>
       <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
