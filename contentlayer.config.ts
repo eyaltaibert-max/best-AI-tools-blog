@@ -104,7 +104,6 @@ export const Blog = defineDocumentType(() => ({
 
     // ✅ ADDED — allow old articles to pass
     description: { type: 'string' },
-    slug: { type: 'string' },
     category: { type: 'string' },
     affiliate_disclosure: { type: 'boolean' },
 
