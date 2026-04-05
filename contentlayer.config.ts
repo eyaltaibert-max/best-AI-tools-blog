@@ -59,9 +59,6 @@ const computedFields: ComputedFields = {
   toc: { type: 'json', resolve: (doc) => extractTocHeadings(doc.body.raw) },
 }
 
-/**
- * Count the occurrences of all tags across blog posts and write to json file
- */
 async function createTagCount(allBlogs) {
   const tagCount: Record<string, number> = {}
   allBlogs.forEach((file) => {
@@ -104,6 +101,13 @@ export const Blog = defineDocumentType(() => ({
     lastmod: { type: 'date' },
     draft: { type: 'boolean' },
     summary: { type: 'string' },
+
+    // ✅ ADDED — allow old articles to pass
+    description: { type: 'string' },
+    slug: { type: 'string' },
+    category: { type: 'string' },
+    affiliate_disclosure: { type: 'boolean' },
+
     images: { type: 'json' },
     authors: { type: 'list', of: { type: 'string' } },
     layout: { type: 'string' },
