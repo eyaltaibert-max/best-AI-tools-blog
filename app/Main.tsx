@@ -10,14 +10,73 @@ export default function Home({ posts }) {
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
-            Latest
-          </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
+        <div className="space-y-6 pt-6 pb-10 md:pt-10 md:pb-14">
+          <div className="space-y-3">
+            <h1 className="text-4xl leading-tight font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl dark:text-gray-100">
+              AI Tools That Help Small Businesses Save Time and Make More Money
+            </h1>
+            <p className="max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-400">
+              Tested AI tools for marketing, sales, and automation — with real comparisons,
+              pricing insights, and clear recommendations.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-3 pt-2">
+            <Link
+              href="/blog"
+              className="rounded-lg bg-gray-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-gray-700 dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-gray-300"
+            >
+              Explore Best AI Tools
+            </Link>
+            <Link
+              href="/tags"
+              className="rounded-lg border border-gray-300 px-5 py-3 text-sm font-semibold text-gray-900 transition hover:bg-gray-100 dark:border-gray-700 dark:text-gray-100 dark:hover:bg-gray-800"
+            >
+              Browse Categories
+            </Link>
+          </div>
+
+          <div className="grid gap-4 pt-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="rounded-xl border border-gray-200 p-4 dark:border-gray-700">
+              <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                Sales
+              </h3>
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                Find AI tools that help small teams close more deals faster.
+              </p>
+            </div>
+            <div className="rounded-xl border border-gray-200 p-4 dark:border-gray-700">
+              <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                Automation
+              </h3>
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                Discover tools that reduce manual work and save hours every week.
+              </p>
+            </div>
+            <div className="rounded-xl border border-gray-200 p-4 dark:border-gray-700">
+              <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                Customer Support
+              </h3>
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                Compare AI tools that help businesses respond faster and support customers better.
+              </p>
+            </div>
+            <div className="rounded-xl border border-gray-200 p-4 dark:border-gray-700">
+              <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                Marketing
+              </h3>
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                Review AI tools for content, growth, and smarter customer acquisition.
+              </p>
+            </div>
+          </div>
+
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            People come to this site to find the best AI tools to grow their business without
+            hiring more people.
           </p>
         </div>
+
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((post) => {
@@ -70,8 +129,9 @@ export default function Home({ posts }) {
           })}
         </ul>
       </div>
+
       {posts.length > MAX_DISPLAY && (
-        <div className="flex justify-end text-base leading-6 font-medium">
+        <div className="flex justify-end pt-6 text-base leading-6 font-medium">
           <Link
             href="/blog"
             className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
@@ -81,8 +141,9 @@ export default function Home({ posts }) {
           </Link>
         </div>
       )}
+
       {siteMetadata.newsletter?.provider && (
-        <div className="flex items-center justify-center pt-4">
+        <div className="flex items-center justify-center pt-8">
           <NewsletterForm />
         </div>
       )}
