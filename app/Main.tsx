@@ -16,8 +16,8 @@ export default function Home({ posts }) {
               AI Tools That Help Small Businesses Save Time and Make More Money
             </h1>
             <p className="max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-400">
-              Tested AI tools for marketing, sales, and automation — with real comparisons,
-              pricing insights, and clear recommendations.
+              Tested AI tools for marketing, sales, and automation — with real
+              comparisons, pricing insights, and clear recommendations.
             </p>
           </div>
 
@@ -45,6 +45,7 @@ export default function Home({ posts }) {
                 Find AI tools that help small teams close more deals faster.
               </p>
             </div>
+
             <div className="rounded-xl border border-gray-200 p-4 dark:border-gray-700">
               <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
                 Automation
@@ -53,27 +54,31 @@ export default function Home({ posts }) {
                 Discover tools that reduce manual work and save hours every week.
               </p>
             </div>
+
             <div className="rounded-xl border border-gray-200 p-4 dark:border-gray-700">
               <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
                 Customer Support
               </h3>
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                Compare AI tools that help businesses respond faster and support customers better.
+                Compare AI tools that help businesses respond faster and support
+                customers better.
               </p>
             </div>
+
             <div className="rounded-xl border border-gray-200 p-4 dark:border-gray-700">
               <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
                 Marketing
               </h3>
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                Review AI tools for content, growth, and smarter customer acquisition.
+                Review AI tools for content, growth, and smarter customer
+                acquisition.
               </p>
             </div>
           </div>
 
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            People come to this site to find the best AI tools to grow their business without
-            hiring more people.
+            People come to this site to find the best AI tools to grow their
+            business without hiring more people.
           </p>
         </div>
 
@@ -81,6 +86,7 @@ export default function Home({ posts }) {
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((post) => {
             const { slug, date, title, summary, tags } = post
+
             return (
               <li key={slug} className="py-12">
                 <article>
@@ -88,9 +94,12 @@ export default function Home({ posts }) {
                     <dl>
                       <dt className="sr-only">Published on</dt>
                       <dd className="text-base leading-6 font-medium text-gray-500 dark:text-gray-400">
-                        <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                        <time dateTime={date}>
+                          {formatDate(date, siteMetadata.locale)}
+                        </time>
                       </dd>
                     </dl>
+
                     <div className="space-y-5 xl:col-span-3">
                       <div className="space-y-6">
                         <div>
@@ -102,16 +111,19 @@ export default function Home({ posts }) {
                               {title}
                             </Link>
                           </h2>
+
                           <div className="flex flex-wrap">
                             {tags.map((tag) => (
                               <Tag key={tag} text={tag} />
                             ))}
                           </div>
                         </div>
+
                         <div className="prose max-w-none text-gray-500 dark:text-gray-400">
                           {summary}
                         </div>
                       </div>
+
                       <div className="text-base leading-6 font-medium">
                         <Link
                           href={`/blog/${slug}`}
