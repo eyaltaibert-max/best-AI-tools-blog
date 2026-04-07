@@ -11,7 +11,7 @@ const siteMetadata = {
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
   email: 'admin@bestaiapp.co',
   x: 'https://twitter.com/@KNextron',
-  // twitter: 'https://twitter.com/Twitter',
+  // twitter: 'https://twitter.com/@KNextron',
   facebook: 'https://facebook.com',
   youtube: 'https://youtube.com',
   linkedin: 'https://www.linkedin.com',
