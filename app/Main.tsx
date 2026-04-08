@@ -79,7 +79,85 @@ export default function Home({ posts }) {
             hiring more people.
           </p>
         </div>
+<div className="space-y-4 py-8">
+  <div className="space-y-2">
+    <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
+      Top AI Tool Picks for Small Businesses
+    </h2>
+    <p className="text-gray-600 dark:text-gray-400">
+      Start with the categories that usually create the fastest ROI for small teams.
+    </p>
+  </div>
 
+  <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="rounded-xl border border-gray-200 p-5 dark:border-gray-700">
+      <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100">
+        Best AI for Sales
+      </h3>
+      <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+        Tools that help teams qualify leads, follow up faster, and close more deals.
+      </p>
+      <div className="mt-4">
+        <Link
+          href="/tags/sales"
+          className="text-sm font-medium text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+        >
+          Explore sales tools &rarr;
+        </Link>
+      </div>
+    </div>
+
+    <div className="rounded-xl border border-gray-200 p-5 dark:border-gray-700">
+      <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100">
+        Best AI for Automation
+      </h3>
+      <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+        Tools that remove repetitive work and save hours every week.
+      </p>
+      <div className="mt-4">
+        <Link
+          href="/tags/automation"
+          className="text-sm font-medium text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+        >
+          Explore automation tools &rarr;
+        </Link>
+      </div>
+    </div>
+
+    <div className="rounded-xl border border-gray-200 p-5 dark:border-gray-700">
+      <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100">
+        Best AI for Customer Support
+      </h3>
+      <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+        Tools that improve response speed and help support more customers with less effort.
+      </p>
+      <div className="mt-4">
+        <Link
+          href="/tags/customer-support"
+          className="text-sm font-medium text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+        >
+          Explore support tools &rarr;
+        </Link>
+      </div>
+    </div>
+    <div className="rounded-xl border border-gray-200 p-5 dark:border-gray-700">
+      <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100">
+        Best AI for Marketing
+      </h3>
+      <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+        Tools for content, campaigns, and customer acquisition.
+      </p>
+      <div className="mt-4">
+        <Link
+          href="/tags/marketing"
+          className="text-sm font-medium text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+        >
+          Explore marketing tools &rarr;
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((post) => {
